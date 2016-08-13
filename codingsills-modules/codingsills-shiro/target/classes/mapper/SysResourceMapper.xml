@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.codingsills.mapper.SysResourceMapper">
+  <resultMap id="BaseResultMap" type="org.codingsills.model.SysResource">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="permission" jdbcType="VARCHAR" property="permission" />
+    <result column="available" jdbcType="BIT" property="available" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+  </resultMap>
+</mapper>

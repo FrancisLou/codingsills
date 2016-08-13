@@ -1,0 +1,16 @@
+insert into sys_resource values(1,'系统管理','menu',NULL,0,NULL,true,1,'fa fa-gear');
+insert into sys_resource values(2,'用户管理','menu','/user/list.t',1,'user:list',true,11,'fa fa-users');
+insert into sys_resource values(3,'角色管理','menu','/role/list.t',1,'role:list',true,12,'fa fa-lock');
+insert into sys_resource values(4,'资源管理','menu','/resource/list.t',1,'resource:list',true,13,'fa fa-reorder');
+insert into sys_resource values(5,'用户新增','btn','/user/add.t',2,'user:add',true,NULL,'');
+insert into sys_resource values(6,'用户修改','btn','/user/edit.t',2,'user:edit',true,NULL,'');
+insert into sys_resource values(7,'用户删除','btn','/user/delete.t',2,'user:delete',true,NULL,'');
+insert into sys_resource values(8,'用户查看','btn','/user/view.t',2,'user:view',true,NULL,'');
+insert into sys_resource values(9,'角色新增','btn','/role/add.t',3,'role:add',true,NULL,'');
+insert into sys_resource values(10,'角色修改','btn','/role/edit.t',3,'role:edit',true,NULL,'');
+insert into sys_resource values(11,'角色删除','btn','/role/delete.t',3,'role:delete',true,NULL,'');
+insert into sys_resource values(12,'角色查看','btn','/role/view.t',3,'user:view',true,NULL,'');
+insert into sys_resource values(13,'资源新增','btn','/resource/add.t',4,'resource:add',true,NULL,'');
+insert into sys_resource values(14,'资源修改','btn','/resource/edit.t',4,'resource:edit',true,NULL,'');
+insert into sys_resource values(15,'资源删除','btn','/resource/delete.t',4,'resource:delete',true,NULL,'');
+insert into sys_resource values(16,'资源查看','btn','/resource/view.t',4,'resource:view',true,NULL,'');

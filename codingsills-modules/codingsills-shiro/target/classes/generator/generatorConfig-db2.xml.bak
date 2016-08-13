@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <properties resource="application.properties"/>
+  
+  <!-- maven仓库中找不到对应版本的db2驱动,因此需要指定驱动本地地址 -->	
+  <classPathEntry location="${db2Driver}/db2jcc.jar"/>
+  <classPathEntry location="${db2Driver}/db2jcc_license_cu.jar"/>
+  
+  <context id="db2Table" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+    
+    <plugin type="${mapper.plugin}">
+      <property name="mappers" value="${mapper.Mapper}"/>
+    </plugin>
+
+    <jdbcConnection driverClass="${jdbc.driver}"
+                    connectionURL="${jdbc.url}"
+                    userId="${jdbc.username}"
+                    password="${jdbc.password}">
+    </jdbcConnection>
+
+    <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+
+    <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetResourcesProject}"/>
+
+    <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
+
+    <table schema="DB2ADMIN" tableName="%">
+    	<generatedKey column="id" sqlStatement="DB2" identity="true"/>
+    </table>
+  </context>
+</generatorConfiguration>
