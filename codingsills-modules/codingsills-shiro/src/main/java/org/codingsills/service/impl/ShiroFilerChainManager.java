@@ -9,6 +9,8 @@ import javax.annotation.PostConstruct;
 import org.apache.shiro.web.filter.mgt.DefaultFilterChainManager;
 import org.apache.shiro.web.filter.mgt.NamedFilterList;
 import org.codingsills.entity.UrlFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -24,6 +26,8 @@ import org.springframework.util.StringUtils;
  */
 @Service
 public class ShiroFilerChainManager {
+    
+    private static final Logger logger = LoggerFactory.getLogger(ShiroFilerChainManager.class);
     
     @Autowired
     private DefaultFilterChainManager filterChainManager;
@@ -55,6 +59,7 @@ public class ShiroFilerChainManager {
             }
             //注册perms filter
             if (!StringUtils.isEmpty(urlFilter.getPermissions())) {
+                logger.debug("初始化过滤器链,url:{},perms:{}",url,urlFilter.getPermissions());
                 filterChainManager.addToChain(url, "perms", urlFilter.getPermissions());
             }
         }

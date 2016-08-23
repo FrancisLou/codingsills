@@ -229,12 +229,6 @@ public class RoleServiceImpl extends BaseService<SysRole> implements RoleService
 			
 			filterList.add(filter);
 		}
-		if(!filterList.isEmpty()){
-		    UrlFilter baseFilter = new UrlFilter();
-		    baseFilter.setUrl("/");
-		    baseFilter.setName("M+");
-		    baseFilter.setPermissions("*");
-		}
 
 		return filterList;
 	}

@@ -40,7 +40,7 @@ public class CustomDefaultFilterChainManager extends DefaultFilterChainManager {
     public CustomDefaultFilterChainManager(){
         setFilters(new LinkedHashMap<String, Filter>());
         setFilterChains(new LinkedHashMap<String, NamedFilterList>());
-        addDefaultFilters(true);
+        addDefaultFilters(false);
     }
 
     public Map<String, String> getFilterChainDefinitionMap(){

@@ -99,25 +99,26 @@
     
     <!-- 自定义filter -->
     <bean id="sysUserFilter" class="org.codingsills.web.filter.SysUserFilter"/>
+    <bean id="hasAnyRoleFilter" class="org.codingsills.shiro.CustomRolesAuthorizationFilter" />
    
     <!-- 自定义过滤器链管理器  -->
     <bean id="filterChainManager" class="org.codingsills.shiro.CustomDefaultFilterChainManager">
         <property name="loginUrl" value="/login.t"/>
         <property name="successUrl" value="/"/>
-        <property name="unauthorizedUrl" value="/WEB-INF/views/unauthorized.jsp"/>
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
 
         <property name="customFilters">
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
                 <entry key="sysUser" value-ref="sysUserFilter"/>
+                <entry key="hasAnyRole" value-ref="hasAnyRoleFilter" />
             </util:map>
         </property>
         <property name="defaultFilterChainDefinitions">
             <value>
-            	/static/** = anon
                 /login.t = authc
                 /logout.t = logout
-                /WEB-INF/views/unauthorized.jsp = authc
+                /unauthorized.jsp = authc
                 /** = user,sysUser
             </value>
         </property>
@@ -128,7 +129,7 @@
     </bean>
     
 	<!-- Shiro的Web过滤器 -->
-	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean" depends-on="hasAnyRoleFilter">
         <property name="securityManager" ref="securityManager"/>
     </bean>
     
