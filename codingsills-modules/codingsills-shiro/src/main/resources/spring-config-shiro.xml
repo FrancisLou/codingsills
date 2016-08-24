@@ -119,7 +119,7 @@
                 /login.t = authc
                 /logout.t = logout
                 /unauthorized.jsp = authc
-                /** = user,sysUser
+                /** = user,sysUser,hasAnyRole
             </value>
         </property>
     </bean>
@@ -129,7 +129,7 @@
     </bean>
     
 	<!-- Shiro的Web过滤器 -->
-	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean" depends-on="hasAnyRoleFilter">
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
     </bean>
     

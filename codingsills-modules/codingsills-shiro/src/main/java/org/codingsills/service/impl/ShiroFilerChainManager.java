@@ -55,7 +55,7 @@ public class ShiroFilerChainManager {
             String url = urlFilter.getUrl();
             //注册roles filter
             if (!StringUtils.isEmpty(urlFilter.getRoles())) {
-                filterChainManager.addToChain(url, "roles", urlFilter.getRoles());
+                filterChainManager.addToChain(url, "hasAnyRole", urlFilter.getRoles());
             }
             //注册perms filter
             if (!StringUtils.isEmpty(urlFilter.getPermissions())) {
