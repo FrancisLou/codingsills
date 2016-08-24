@@ -43,9 +43,9 @@ public class LoginController {
 	@RequestMapping("/")
     public String index(@CurrentUser SysUser loginUser, Model model) {
         //TODO 根据用户名获取用户菜单
-        List<SysResource> menuList = userService.findMenuBy(loginUser.getUserName());
-        /*Set<String> permissions = userService.findPermissions(loginUser.getUserName());
-        List<Resource> menus = resourceService.findMenus(permissions);*/
+//        List<SysResource> menuList = userService.findMenuBy(loginUser.getUserName());
+//        Set<String> permissions = userService.findPermissions(loginUser.getUserName());
+        List<Resource> menus = resourceService.findMenus(permissions);
         
         model.addAttribute("menus", resourceService.initMenu(ResTypeEnum.MENU));
         return "main";

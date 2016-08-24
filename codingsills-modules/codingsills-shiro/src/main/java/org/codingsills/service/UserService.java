@@ -35,6 +35,8 @@ public interface UserService extends IService<SysUser>{
     
     public void deleteUser(Long id);
     
+    public void changePassword(Long userId,String newPassword);
+    
     public Map<String,Set<String>> findRolesAndPermissions(String userName);
     
     public List<SysResource> findMenuBy(String userName);

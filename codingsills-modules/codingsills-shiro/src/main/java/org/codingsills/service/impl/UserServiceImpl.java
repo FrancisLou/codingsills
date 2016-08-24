@@ -61,6 +61,9 @@ public class UserServiceImpl extends BaseService<SysUser> implements UserService
     @Resource
     private RRoleResourceMapper roleResMapper;
     
+    @Resource
+    private PasswordHelper passwordHelper;
+    
     @Override
     public PageObject<SysUser> pageBy(SysUser user, int page, int rows){
         Example example = new Example(SysResource.class);
@@ -118,6 +121,7 @@ public class UserServiceImpl extends BaseService<SysUser> implements UserService
 
     @Override
     public void addUser(UserVO user){
+        passwordHelper.encryptPassword(user);
         userMapper.insertUseGeneratedKeys(user);
         // 建立用户与角色关系
         String[] roleIdAry = user.getRoleAry();
@@ -228,5 +232,13 @@ public class UserServiceImpl extends BaseService<SysUser> implements UserService
             }
         }
         return sysResList;
+    }
+
+    @Override
+    public void changePassword(Long userId, String newPassword){
+        SysUser user =  userMapper.selectByPrimaryKey(userId);;
+        user.setPassword(newPassword);
+        passwordHelper.encryptPassword(user);
+        userMapper.updateByPrimaryKeySelective(user);
     }
 }

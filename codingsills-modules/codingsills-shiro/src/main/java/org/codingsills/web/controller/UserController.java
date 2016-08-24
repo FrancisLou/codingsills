@@ -62,9 +62,6 @@ public class UserController {
     @RequestMapping(value="addUser.t",method=RequestMethod.POST)
     public ModelAndView addUser(@ModelAttribute(value="user")UserVO user){
         ModelAndView mav = new ModelAndView("user/list");
-//        user.setStatus("1");
-//        user.setSalt("abcdsafeafefegkphorkpgkprk");
-        
         userService.addUser(user);
         return mav;
     }
