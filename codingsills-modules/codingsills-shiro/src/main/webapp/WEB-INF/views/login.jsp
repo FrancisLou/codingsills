@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -34,6 +33,12 @@
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="密码" required="">
                 </div>
+                <c:if test="${jcaptchaEnabled}">
+                	<div class="form-group">
+	                	<input type=text name="jcaptchaCode" class="form-control" placeholder="验证码" >
+	                	<a href="javascript:;"><img src="${ctx}/jcaptcha.jpg"></a>
+                	</div>
+                </c:if>
                 <button type="submit" class="btn btn-primary block full-width m-b">登录</button>
 
                 <p class="text-muted text-center">

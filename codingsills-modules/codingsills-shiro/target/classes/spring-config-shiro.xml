@@ -90,35 +90,37 @@
     </bean>
 	
 	<!-- 基于Form表单的身份验证过滤器 -->
-    <bean id="formAuthenticationFilter" class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+    <bean id="formAuthenticationFilter" class="org.codingsills.shiro.CustomFormAuthenticationFilter">
         <property name="usernameParam" value="username"/>
         <property name="passwordParam" value="password"/>
         <property name="rememberMeParam" value="rememberMe"/>
         <property name="loginUrl" value="/login.t"/>
+        <property name="jcaptchaEnabled" value="true"/>  
+	    <property name="jcaptchaParam" value="jcaptchaCode"/> 
     </bean>
     
+    
     <!-- 自定义filter -->
-    <bean id="sysUserFilter" class="org.codingsills.web.filter.SysUserFilter"/>
-   
+    <bean id="hasAnyRoleFilter" class="org.codingsills.shiro.CustomRolesAuthorizationFilter" />
+
     <!-- 自定义过滤器链管理器  -->
     <bean id="filterChainManager" class="org.codingsills.shiro.CustomDefaultFilterChainManager">
         <property name="loginUrl" value="/login.t"/>
         <property name="successUrl" value="/"/>
-        <property name="unauthorizedUrl" value="/WEB-INF/views/unauthorized.jsp"/>
-
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
         <property name="customFilters">
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
-                <entry key="sysUser" value-ref="sysUserFilter"/>
+                <entry key="hasAnyRole" value-ref="hasAnyRoleFilter" />
+                <!-- <entry key="jCaptchaValidate" value-ref="jCaptchaValidateFilter"/> -->
             </util:map>
         </property>
         <property name="defaultFilterChainDefinitions">
             <value>
-            	/static/** = anon
                 /login.t = authc
                 /logout.t = logout
-                /WEB-INF/views/unauthorized.jsp = authc
-                /** = user,sysUser
+                /unauthorized.jsp = authc
+                /** = user,hasAnyRole
             </value>
         </property>
     </bean>
@@ -126,7 +128,7 @@
     <bean id="filterChainResolver" class="org.codingsills.shiro.CustomPathMatchingFilterChainResolver">
         <property name="customDefaultFilterChainManager" ref="filterChainManager"/>
     </bean>
-    
+  
 	<!-- Shiro的Web过滤器 -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
@@ -142,4 +144,9 @@
 	<!-- Shiro生命周期处理器  -->
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
 	
+	<!-- 开启Shiro注解 -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor"/>  
+        <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">  
+      <property name="securityManager" ref="securityManager"/>  
+    </bean>
 </beans>
