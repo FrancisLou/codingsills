@@ -1,6 +1,9 @@
 package org.codingsills.web.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -10,13 +13,9 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
-import org.codingsills.constants.ResTypeEnum;
 import org.codingsills.model.SysResource;
-import org.codingsills.model.SysUser;
-import org.codingsills.service.ResourceService;
 import org.codingsills.service.UserService;
-import org.codingsills.web.bind.annotation.CurrentUser;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.codingsills.vo.TreeVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,21 +32,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginController {
     
-    @Autowired
-    private ResourceService resourceService;
-    
     @Resource
     private UserService userService;
     
-    @SuppressWarnings("unused")
 	@RequestMapping("/")
-    public String index(@CurrentUser SysUser loginUser, Model model) {
-        //TODO 根据用户名获取用户菜单
-//        List<SysResource> menuList = userService.findMenuBy(loginUser.getUserName());
-//        Set<String> permissions = userService.findPermissions(loginUser.getUserName());
-        List<Resource> menus = resourceService.findMenus(permissions);
-        
-        model.addAttribute("menus", resourceService.initMenu(ResTypeEnum.MENU));
+    public String index(Model model) {
+        //根据用户名获取用户菜单
+        List<SysResource> menuList = userService.findMenuBy((String)SecurityUtils.getSubject().getPrincipal());
+        List<TreeVO> treeVos = null;
+        List<SysResource> childList = new ArrayList<SysResource>();
+        if(menuList != null && menuList.size() > 0){
+        	Map<Long,TreeVO> menuMap = new HashMap<Long,TreeVO>();
+        	for(SysResource sysRes : menuList){
+        		if(sysRes.getParentId().equals(0L)){//筛选一级菜单
+        			menuMap.put(sysRes.getId(), new TreeVO(sysRes));
+        		}else{
+        			childList.add(sysRes);
+        		}
+        	}
+        	for(SysResource sysRes2 : childList){
+        		if(menuMap.keySet().contains(sysRes2.getParentId())){//筛选二级菜单
+        			List<TreeVO> childTrees = menuMap.get(sysRes2.getParentId()).getNodes();
+        			if(childTrees == null){
+        				childTrees = new ArrayList<TreeVO>();
+        			}
+        			childTrees.add(new TreeVO(sysRes2));	
+        			menuMap.get(sysRes2.getParentId()).setNodes(childTrees);
+        		}
+        	}
+        	treeVos = new ArrayList<>(menuMap.values());
+        }
+        model.addAttribute("menus", treeVos);
         return "main";
     }
     
@@ -60,7 +75,11 @@ public class LoginController {
         } else if(IncorrectCredentialsException.class.getName().equals(exceptionClassName)) {
             error = "用户名/密码错误";
         } else if(exceptionClassName != null) {
-            error = "其他错误：" + exceptionClassName;
+        	if(exceptionClassName.equals("jcaptcha.error")){
+        		error = "验证码错误";
+        	}else{
+        		error = "其他错误：" + exceptionClassName;
+        	}
         }
         model.addAttribute("error", error);
         return "login";

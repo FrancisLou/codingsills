@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -60,21 +61,21 @@ public class ResourceController {
         return mav;
     }
     
-    @RequestMapping(value = "/toAddView.t")
+    @RequestMapping(value = "/addMenu.t",method=RequestMethod.GET)
     public ModelAndView toAddView(@RequestParam(name = "parentId") String parentId){
         ModelAndView mav = new ModelAndView("resource/addMenu");
         mav.addObject("parentId", parentId);
         return mav;
     }
 
-    @RequestMapping(value = "/addMenu.t")
+    @RequestMapping(value = "/addMenu.t",method=RequestMethod.POST)
     public ModelAndView addMenu(@ModelAttribute(value = "menuVO") ResourceVO menuVO){
         ModelAndView mav = new ModelAndView("resource/menuView");
         resourceService.saveMenu(menuVO);
         return mav;
     }
 
-    @RequestMapping(value = "/toModifyView.t")
+    @RequestMapping(value = "/editMenu.t",method=RequestMethod.GET)
     public ModelAndView toModifyView(@RequestParam(name = "menuId") Long menuId){
         ModelAndView mav = new ModelAndView("resource/modifyMenu");
         SysResource tmenu = resourceService.selectByKey(menuId);
@@ -82,7 +83,7 @@ public class ResourceController {
         return mav;
     }
 
-    @RequestMapping(value = "/modifyMenu.t")
+    @RequestMapping(value = "/editMenu.t",method=RequestMethod.POST)
     public ModelAndView modifyMenu(@ModelAttribute(value = "menuVO") ResourceVO menuVO){
         ModelAndView mav = new ModelAndView("resource/menuView");
         resourceService.updateMenu(menuVO);

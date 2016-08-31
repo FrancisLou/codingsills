@@ -66,7 +66,7 @@ public class UserController {
         return mav;
     }
     
-    @RequestMapping(value="toEditView.t")
+    @RequestMapping(value="editUser.t",method=RequestMethod.GET)
     public ModelAndView toEditView(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("user/edit");
         UserVO user = userService.getUser(id);
@@ -77,14 +77,14 @@ public class UserController {
         return mav;
     }
     
-    @RequestMapping(value="editUser.t")
+    @RequestMapping(value="editUser.t",method=RequestMethod.POST)
     public ModelAndView editUser(@ModelAttribute(value="user") UserVO user){
         ModelAndView mav = new ModelAndView("user/list");
         userService.updateUser(user);
         return mav;
     }
     
-    @RequestMapping(value="deleteUserById.t")
+    @RequestMapping(value="deleteUser.t",method=RequestMethod.GET)
     public ModelAndView deleteUserById(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("user/list");
         userService.deleteUser(id);

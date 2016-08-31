@@ -60,11 +60,9 @@ public class CustomDefaultFilterChainManager extends DefaultFilterChainManager {
     public void setDefaultFilterChainDefinitions(String definitions){
         Ini ini = new Ini();
         ini.load(definitions);
-        // did they explicitly state a 'urls' section? Not necessary, but just in case:
+        //避免.ini配置了[urls]节点
         Ini.Section section = ini.getSection(IniFilterChainResolverFactory.URLS);
         if(CollectionUtils.isEmpty(section)){
-            // no urls section. Since this _is_ a urls chain definition property, just assume the
-            // default section contains only the definitions:
             section = ini.getSection(Ini.DEFAULT_SECTION_NAME);
         }
         setFilterChainDefinitionMap(section);
@@ -173,4 +171,5 @@ public class CustomDefaultFilterChainManager extends DefaultFilterChainManager {
         applySuccessUrlIfNecessary(filter);
         applyUnauthorizedUrlIfNecessary(filter);
     }
+
 }

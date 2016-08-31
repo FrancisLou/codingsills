@@ -11,7 +11,7 @@ import org.apache.shiro.web.filter.mgt.FilterChainManager;
 import org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver;
 
 /**
- * 类功能描述
+ * 自定义路径过滤器链解析器
  * CustomPathMatchingFilterChainResolver.java
  *
  * @date 2016年6月17日
@@ -19,7 +19,7 @@ import org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver;
  * @author Saber
  */
 public class CustomPathMatchingFilterChainResolver extends PathMatchingFilterChainResolver {
-
+	
     private CustomDefaultFilterChainManager customDefaultFilterChainManager;
 
     public void setCustomDefaultFilterChainManager(
@@ -35,14 +35,11 @@ public class CustomPathMatchingFilterChainResolver extends PathMatchingFilterCha
             return null;
         }
         String requestURI = getPathWithinApplication(request);
+        
         List<String> chainNames = new ArrayList<String>();
-        // the 'chain names' in this implementation are actually path patterns defined by the user.
-        // We just use them
-        // as the chain name for the FilterChainManager's requirements
         for(String pathPattern : filterChainManager.getChainNames()){
-            // If the path does match, then pass on to the subclass implementation for specific
-            // checks:
-            if(pathMatches(pathPattern, requestURI)){
+        	//不对静态资源添加过滤器
+            if(pathMatches(pathPattern, requestURI) && notStaticResource(requestURI)){
                 chainNames.add(pathPattern);
             }
         }
@@ -50,5 +47,16 @@ public class CustomPathMatchingFilterChainResolver extends PathMatchingFilterCha
             return null;
         }
         return customDefaultFilterChainManager.proxy(originalChain, chainNames);
+    }
+    
+    /**
+     * 判断是否为静态资源
+     * */
+    private boolean notStaticResource(String requestUri){
+    	if(requestUri.endsWith("css") || requestUri.endsWith("js") || requestUri.endsWith("ico")
+    			||requestUri.endsWith("jpg") || requestUri.endsWith("png")){
+    		return false;
+    	}
+    	return true;
     }
 }

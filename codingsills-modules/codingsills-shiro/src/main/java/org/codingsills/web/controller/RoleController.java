@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -53,14 +54,14 @@ public class RoleController {
         return pageObj;
     }
     
-    @RequestMapping(value="toAddView.t")
+    @RequestMapping(value="addRole.t",method=RequestMethod.GET)
     public ModelAndView toAddView(){
         ModelAndView mav = new ModelAndView("role/add");
         
         return mav;
     }
     
-    @RequestMapping(value="addRole.t")
+    @RequestMapping(value="addRole.t",method=RequestMethod.POST)
     public ModelAndView addRole(@ModelAttribute(value="role") RoleVO role){
         ModelAndView mav = new ModelAndView("role/list");
         roleService.addRole(role);
@@ -68,7 +69,7 @@ public class RoleController {
         return mav;
     }
     
-    @RequestMapping(value="toEditView.t")
+    @RequestMapping(value="editRole.t",method=RequestMethod.GET)
     public ModelAndView toEditView(@RequestParam Long id){
         ModelAndView mav = new ModelAndView("role/edit");
         
@@ -79,7 +80,7 @@ public class RoleController {
         return mav;
     }
     
-    @RequestMapping(value="editRole.t")
+    @RequestMapping(value="editRole.t",method=RequestMethod.POST)
     public ModelAndView editRole(@ModelAttribute(value="role") RoleVO role){
         ModelAndView mav = new ModelAndView("role/list");
         
@@ -87,7 +88,7 @@ public class RoleController {
         return mav;
     }
     
-    @RequestMapping(value="delRole.t")
+    @RequestMapping(value="deleteRole.t",method=RequestMethod.GET)
     public ModelAndView delRole(@RequestParam(required = true,value="id") Long id){
         ModelAndView mav = new ModelAndView("role/list");
         roleService.deleteRole(id);
