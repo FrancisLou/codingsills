@@ -20,7 +20,7 @@
                             <img alt="image" class="img-circle" src="${ctx}/static/images/profile_small.jpg" />
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">二十四桥</strong>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${currentUser }</strong>
                              </span> <span class="text-muted text-xs block">超级管理员 <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             	<li><a href="#">修改头像</a></li>

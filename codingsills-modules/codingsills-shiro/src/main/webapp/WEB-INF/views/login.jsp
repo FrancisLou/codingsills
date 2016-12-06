@@ -36,7 +36,7 @@
                 <c:if test="${jcaptchaEnabled}">
                 	<div class="form-group">
 	                	<input type=text name="jcaptchaCode" class="form-control" placeholder="验证码" >
-	                	<a href="javascript:;"><img src="${ctx}/jcaptcha.jpg"></a>
+	                	<a href="javascript:;" ><img src="${ctx}/jcaptcha.jpg" onclick="this.src='${ctx}/jcaptcha.jpg'"></a>
                 	</div>
                 </c:if>
                 <button type="submit" class="btn btn-primary block full-width m-b">登录</button>

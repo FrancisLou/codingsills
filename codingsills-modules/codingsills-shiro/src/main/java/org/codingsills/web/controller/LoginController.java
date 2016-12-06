@@ -60,9 +60,10 @@ public class LoginController {
         			menuMap.get(sysRes2.getParentId()).setNodes(childTrees);
         		}
         	}
-        	treeVos = new ArrayList<>(menuMap.values());
+        	treeVos = new ArrayList<TreeVO>(menuMap.values());
         }
         model.addAttribute("menus", treeVos);
+        model.addAttribute("currentUser", SecurityUtils.getSubject().getPrincipal());
         return "main";
     }
     
