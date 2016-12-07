@@ -7,7 +7,7 @@
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
-	<%@include file="./pages/common/common.jsp" %>
+	<%@include file="./pages/common/commcss.jsp" %>
 
 </head>
 
@@ -42,7 +42,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="logo-element">H+
+                        <div class="logo-element">M+
                         </div>
                     </li>
                     <li>
@@ -71,7 +71,7 @@
 
                     </li>
                     <li>
-                        <a class="J_menuItem" href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
+                        <a class="J_menuItem" href="${ctx}/pages/layout/layouts.jsp"><i class="fa fa-columns"></i> <span class="nav-label">布局</span></a>
                     </li>
                     <li>
                         <a href="#">
@@ -81,25 +81,25 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/echarts.jsp">百度ECharts</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/flot.jsp">Flot</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/morris.jsp">Morris.js</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_rickshaw.html">Rickshaw</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/rickshaw.jsp">Rickshaw</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_peity.html">Peity</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/peity.jsp">Peity</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_sparkline.html">Sparkline</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/sparkline.jsp">Sparkline</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_metrics.html">图表组合</a>
+                                <a class="J_menuItem" href="${ctx}/pages/graph/metrics.jsp">图表组合</a>
                             </li>
                         </ul>
                     </li>
@@ -904,5 +904,6 @@
             </a>
         </div>
     </div>
+    <%@include file="./pages/common/commjs.jsp" %>
 </body>
 </html>

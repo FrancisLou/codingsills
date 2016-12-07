@@ -6,7 +6,7 @@
 <head>
     <title>M+ 后台主题UI框架 - 主页示例</title>
 
-    <%@include file="../common/common.jsp" %>
+    <%@include file="../common/commcss.jsp" %>
 
 </head>
 
@@ -27,7 +27,7 @@
             <small>移动设备访问请扫描以下二维码：</small>
             <br>
             <br>
-            <img src="img/qr_code.png" width="100%" style="max-width:264px;">
+            <img src="#" width="100%" style="max-width:264px;">
             <br>
         </div>
         <div class="col-sm-5">
@@ -230,7 +230,7 @@
                             <br>如果图片太小，可以点击图片放大。
                         </div>
                         <p id="pay-qrcode">
-                            <a href="javascript:;"><img src="img/pay.png" width="100%" alt="请使用手机支付宝或者微信扫码支付">
+                            <a href="javascript:;"><img src="#" width="100%" alt="请使用手机支付宝或者微信扫码支付">
                             </a>
                         </p>
 
@@ -239,6 +239,7 @@
             </div>
         </div>
     </div>
+    <%@include file="../common/commjs.jsp" %>
     <script id="welcome-template" type="text/x-handlebars-template">
         <div class="border-bottom white-bg page-heading clearfix">
             <h2>更新日志：</h2>
