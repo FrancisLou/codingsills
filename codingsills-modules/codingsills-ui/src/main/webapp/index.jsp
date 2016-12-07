@@ -35,7 +35,7 @@
                                 </li>
                                 <li><a class="J_menuItem" href="contacts.html">联系我们</a>
                                 </li>
-                                <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                                <li><a class="J_menuItem" href="${ctx}/pages/mailbox/mailbox.jsp">信箱</a>
                                 </li>
                                 <li class="divider"></li>
                                 <li><a href="login.html">安全退出</a>
@@ -105,13 +105,13 @@
                     </li>
 
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <a href="${ctx}/pages/mailbox/mailbox.jsp"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/mailbox/mailbox.jsp">收件箱</a>
                             </li>
-                            <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/mailbox/mail_detail.jsp">查看邮件</a>
                             </li>
-                            <li><a class="J_menuItem" href="mail_compose.html">写信</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/mailbox/mail_compose.jsp">写信</a>
                             </li>
                         </ul>
                     </li>
