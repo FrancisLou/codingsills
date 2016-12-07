@@ -1,12 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.codingsills</groupId>
-    <artifactId>codingsills-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../codingsills-modules/codingsills-parent/</relativePath>
-  </parent>
+  <groupId>org.codingsills</groupId>
   <artifactId>codingsills-modules</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>codingsills-parent</module>
@@ -18,5 +14,6 @@
   	<module>codingsills-ssm4</module>
   	<module>codingsills-ssj</module>
   	<module>codingsills-shiro</module>
+  	<module>codingsills-ui</module>
   </modules>
 </project>

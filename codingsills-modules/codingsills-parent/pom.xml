@@ -898,4 +898,7 @@
 			</build>
 		</profile>
 	</profiles>
+	<modules>
+		<module>codingsills-ui</module>
+	</modules>
 </project>
