@@ -123,9 +123,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">支付宝</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">支付宝提醒</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝提醒</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>
@@ -135,9 +135,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks" checked>
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">Amaze UI</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">Amaze UI Beta2 发布</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI Beta2 发布</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午10:57</td>
@@ -146,9 +146,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">wp-user-frontend-pro v2.1.9</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">wp-user-frontend-pro v2.1.9</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午9:21</td>
@@ -157,9 +157,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">史上最全！淘宝双11红包疯抢攻略！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">史上最全！淘宝双11红包疯抢攻略！</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">中午12:24</td>
@@ -168,9 +168,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a> <span class="label label-danger pull-right">AD</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a> <span class="label label-danger pull-right">AD</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>
@@ -180,9 +180,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">支付宝</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">支付宝提醒</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝提醒</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>
@@ -192,9 +192,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">Amaze UI</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">Amaze UI Beta2 发布</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI Beta2 发布</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午10:57</td>
@@ -203,9 +203,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">wp-user-frontend-pro v2.1.9</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">wp-user-frontend-pro v2.1.9</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午9:21</td>
@@ -214,9 +214,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">史上最全！淘宝双11红包疯抢攻略！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">史上最全！淘宝双11红包疯抢攻略！</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">中午12:24</td>
@@ -225,9 +225,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a> <span class="label label-danger pull-right">AD</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a> <span class="label label-danger pull-right">AD</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>
@@ -237,9 +237,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">支付宝</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">支付宝提醒</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">支付宝提醒</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>
@@ -249,9 +249,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">Amaze UI</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">Amaze UI Beta2 发布</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">Amaze UI Beta2 发布</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午10:57</td>
@@ -260,9 +260,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">WordPress</a> <span class="label label-warning pull-right">验证邮件</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">wp-user-frontend-pro v2.1.9</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">wp-user-frontend-pro v2.1.9</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午9:21</td>
@@ -271,9 +271,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">史上最全！淘宝双11红包疯抢攻略！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">史上最全！淘宝双11红包疯抢攻略！</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">中午12:24</td>
@@ -282,9 +282,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">淘宝网</a> <span class="label label-danger pull-right">AD</span>
+                                <td class="mail-ontact"><a href="${ctx}/pages/mailbox/mail_detail.jsp">淘宝网</a> <span class="label label-danger pull-right">AD</span>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
+                                <td class="mail-subject"><a href="${ctx}/pages/mailbox/mail_detail.jsp">亲，双11来啦！帮你挑货，还送你4999元红包！仅此一次！</a>
                                 </td>
                                 <td class=""><i class="fa fa-paperclip"></i>
                                 </td>

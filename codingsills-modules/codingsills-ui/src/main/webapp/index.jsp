@@ -118,13 +118,13 @@
                     <li>
                         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/basic.jsp">基本表单</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/validate.jsp">表单验证</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/advanced.jsp">高级插件</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/wizard.jsp">表单向导</a>
                             </li>
                             <li>
                                 <a href="#">文件上传 <span class="fa arrow"></span></a>
