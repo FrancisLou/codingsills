@@ -7,7 +7,7 @@
     <title>M+ 后台主题UI框架 - 主页示例</title>
     <%@include file="../common/commcss.jsp" %>
     <link href="${ctx}/static/plugins/chosen/chosen.css" rel="stylesheet" type="text/css" >
-    <link href="${ctx}/static/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" >
+    <link href="${ctx}/static/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" >
     <link href="${ctx}/static/plugins/cropper/cropper.min.css" rel="stylesheet" type="text/css" >
     <link href="${ctx}/static/plugins/switchery/switchery.css" rel="stylesheet" type="text/css" >
     <link href="${ctx}/static/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet" type="text/css" >
@@ -961,7 +961,7 @@
     <script src="${ctx}/static/plugins/switchery/switchery.js" type="text/javascript" ></script>
     <script src="${ctx}/static/plugins/ionRangeSlider/ion.rangeSlider.min.js" type="text/javascript" ></script>
     <script src="${ctx}/static/plugins/iCheck/icheck.min.js" type="text/javascript" ></script>
-    <script src="${ctx}/static/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript" ></script>
+    <script src="${ctx}/static/plugins/colorpicker/js/bootstrap-colorpicker.min.js" type="text/javascript" ></script>
     <script src="${ctx}/static/plugins/clockpicker/clockpicker.js" type="text/javascript" ></script>
     <script src="${ctx}/static/plugins/cropper/cropper.min.js" type="text/javascript" ></script>
     <script src="${ctx}/static/demo/form-advanced-demo.min.js" type="text/javascript" ></script>

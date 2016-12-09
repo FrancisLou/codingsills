@@ -129,121 +129,121 @@
                             <li>
                                 <a href="#">文件上传 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/webuploader.jsp">百度WebUploader</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/fileupload.jsp">DropzoneJS</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_avatar.html">头像裁剪上传</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/avatar.jsp">头像裁剪上传</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">编辑器 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/editors.jsp">富文本编辑器</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/simditor.jsp">simditor</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/markdown.jsp">MarkDown编辑器</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/form/codeEditor.jsp">代码编辑器</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="suggest.html">搜索自动补全</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/suggest.jsp">搜索自动补全</a>
                             </li>
-                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/form/layerdate.jsp">日期选择器layerDate</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="contacts.html">联系人</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/contacts.jsp">联系人</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/profile.jsp">个人资料</a>
                             </li>
                             <li>
                                 <a href="#">项目管理 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="projects.html">项目</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/projects.jsp">项目</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="project_detail.html">项目详情</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/project_detail.jsp">项目详情</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="teams_board.html">团队管理</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/teams_board.jsp">团队管理</a>
                             </li>
-                            <li><a class="J_menuItem" href="social_feed.html">信息流</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/social_feed.jsp">信息流</a>
                             </li>
-                            <li><a class="J_menuItem" href="clients.html">客户管理</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/clients.jsp">客户管理</a>
                             </li>
-                            <li><a class="J_menuItem" href="file_manager.html">文件管理器</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/file_manager.jsp">文件管理器</a>
                             </li>
-                            <li><a class="J_menuItem" href="calendar.html">日历</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/calendar.jsp">日历</a>
                             </li>
                             <li>
                                 <a href="#">博客 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="blog.html">文章列表</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/blog.jsp">文章列表</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="article.html">文章详情</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/article.jsp">文章详情</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="faq.html">FAQ</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/faq.jsp">FAQ</a>
                             </li>
                             <li>
                                 <a href="#">时间轴 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="timeline.html">时间轴</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/timeline.jsp">时间轴</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="timeline_v2.html">时间轴v2</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/timeline_v2.jsp">时间轴v2</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="pin_board.html">标签墙</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/pin_board.jsp">标签墙</a>
                             </li>
                             <li>
                                 <a href="#">单据 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="invoice.html">单据</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/invoice.jsp">单据</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="invoice_print.html">单据打印</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/invoice_print.jsp">单据打印</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="search_results.html">搜索结果</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/search_results.jsp">搜索结果</a>
                             </li>
-                            <li><a class="J_menuItem" href="forum_main.html">论坛</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/forum_main.jsp">论坛</a>
                             </li>
                             <li>
                                 <a href="#">即时通讯 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="chat_view.html">聊天窗口</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/chat_view.jsp">聊天窗口</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="webim.html">layIM</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/view/webim.jsp">layIM</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">登录注册相关 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a href="login.html" target="_blank">登录页面</a>
+                                    <li><a href="${ctx}/pages/view/login.jsp" target="_blank">登录页面</a>
                                     </li>
-                                    <li><a href="login_v2.html" target="_blank">登录页面v2</a>
+                                    <li><a href="${ctx}/pages/view/login_v2.jsp" target="_blank">登录页面v2</a>
                                     </li>
-                                    <li><a href="register.html" target="_blank">注册页面</a>
+                                    <li><a href="${ctx}/pages/view/register.jsp" target="_blank">注册页面</a>
                                     </li>
-                                    <li><a href="lockscreen.html" target="_blank">登录超时</a>
+                                    <li><a href="${ctx}/pages/view/lockscreen.jsp" target="_blank">登录超时</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="404.html">404页面</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/404.jsp">404页面</a>
                             </li>
-                            <li><a class="J_menuItem" href="500.html">500页面</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/500.jsp">500页面</a>
                             </li>
-                            <li><a class="J_menuItem" href="empty_page.html">空白页</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/view/empty_page.jsp">空白页</a>
                             </li>
                         </ul>
                     </li>
