@@ -8,8 +8,8 @@
     <%@include file="../common/commcss.jsp" %>
     <link href="${ctx}/static/plugins/iCheck/icheck.css" rel="stylesheet">
 
-    <link href="${ctx}/static/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
-    <link href="${ctx}/static/plugins/fullcalendar/fullcalendar.print.css" rel="stylesheet">
+    <link href="${ctx}/static/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet">
+    <link href="${ctx}/static/plugins/fullcalendar/fullcalendar.print.min.css" rel="stylesheet">
 </head>
 
 <body class="gray-bg">
@@ -92,10 +92,72 @@
     <%@include file="../common/commjs.jsp" %>
     <script src="${ctx}/static/js/jquery-ui.custom.min.js"></script>
     <script src="${ctx}/static/plugins/iCheck/icheck.min.js"></script>
+    <script src="${ctx}/static/plugins/fullcalendar/moment.min.js"></script>
     <script src="${ctx}/static/plugins/fullcalendar/fullcalendar.min.js"></script>
     <script src="${ctx}/static/plugins/fullcalendar/zh-cn.js"></script>
 	<script>
-        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",});$("#external-events div.external-event").each(function(){var d={title:$.trim($(this).text())};$(this).data("eventObject",d);$(this).draggable({zIndex:999,revert:true,revertDuration:0})});var b=new Date();var c=b.getDate();var a=b.getMonth();var e=b.getFullYear();$("#calendar").fullCalendar({header:{left:"prev,next",center:"title",right:"month,agendaWeek,agendaDay"},editable:true,droppable:true,drop:function(g,h){var f=$(this).data("eventObject");var d=$.extend({},f);d.start=g;d.allDay=h;$("#calendar").fullCalendar("renderEvent",d,true);if($("#drop-remove").is(":checked")){$(this).remove()}},events:[{title:"日事件",start:new Date(e,a,1)},{title:"长事件",start:new Date(e,a,c-5),end:new Date(e,a,c-2),},{id:999,title:"重复事件",start:new Date(e,a,c-3,16,0),allDay:false,},{id:999,title:"重复事件",start:new Date(e,a,c+4,16,0),allDay:false},{title:"会议",start:new Date(e,a,c,10,30),allDay:false},{title:"午餐",start:new Date(e,a,c,12,0),end:new Date(e,a,c,14,0),allDay:false},{title:"生日",start:new Date(e,a,c+1,19,0),end:new Date(e,a,c+1,22,30),allDay:false},{title:"打开百度",start:new Date(e,a,28),end:new Date(e,a,29),url:"http://baidu.com/"}],})});
+        $(document).ready(function(){
+        	$(".i-checks").iCheck({
+        		checkboxClass:"icheckbox_square-green",
+        		radioClass:"iradio_square-green",
+        	});
+        	$("#external-events div.external-event").each(function(){
+        		var d={title:$.trim($(this).text())};
+        		$(this).data("eventObject",d);
+        		$(this).draggable({zIndex:999,revert:true,revertDuration:0})
+        	});
+        	var b=new Date();
+        	var c=b.getDate();
+        	var a=b.getMonth();
+        	var e=b.getFullYear();
+        	$("#calendar").fullCalendar({
+        		header:{
+        			left:"prev,next",
+        			center:"title",
+        			right:"month,agendaWeek,agendaDay"
+        		},
+        		locale:'zh-cn',
+        		editable:true,
+        		droppable:true,
+        		drop:function(g,h){
+        			var f=$(this).data("eventObject");
+        			var d=$.extend({},f);
+        			d.start=g;
+        			d.allDay=h;
+        			$("#calendar").fullCalendar("renderEvent",d,true);
+        			if($("#drop-remove").is(":checked")){$(this).remove()}
+        		},
+        		events:[{
+        			title:"日事件",
+        			start:new Date(e,a,1)},
+        			{
+        				title:"长事件",
+        				start:new Date(e,a,c-5),
+        				end:new Date(e,a,c-2),
+        			},
+        			{
+        				id:999,
+        				title:"重复事件",
+        				start:new Date(e,a,c-3,16,0),
+        				allDay:false,
+        			},
+        			{
+        				id:999,
+        				title:"重复事件",
+        				start:new Date(e,a,c+4,16,0),
+        				allDay:false
+        			},
+        			{
+        				title:"会议",
+        				start:new Date(e,a,c,10,30),
+        				allDay:false
+        			},
+        			{
+        				title:"午餐",
+        				start:new Date(e,a,c,12,0),
+        				end:new Date(e,a,c,14,0),
+        				allDay:false
+        			},{title:"生日",start:new Date(e,a,c+1,19,0),end:new Date(e,a,c+1,22,30),allDay:false},{title:"打开百度",start:new Date(e,a,28),end:new Date(e,a,29),url:"http://baidu.com/"}],})});
     </script>
 </body>
 

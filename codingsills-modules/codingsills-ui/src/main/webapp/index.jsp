@@ -250,73 +250,73 @@
                     <li>
                         <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="typography.html">排版</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/typography.jsp">排版</a>
                             </li>
                             <li>
                                 <a href="#">字体图标 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
                                     <li>
-                                        <a class="J_menuItem" href="fontawesome.html">Font Awesome</a>
+                                        <a class="J_menuItem" href="${ctx}/pages/ui/fontawesome.jsp">Font Awesome</a>
                                     </li>
                                     <li>
-                                        <a class="J_menuItem" href="glyphicons.html">Glyphicon</a>
+                                        <a class="J_menuItem" href="${ctx}/pages/ui/glyphicons.jsp">Glyphicon</a>
                                     </li>
                                     <li>
-                                        <a class="J_menuItem" href="iconfont.html">阿里巴巴矢量图标库</a>
+                                        <a class="J_menuItem" href="${ctx}/pages/ui/iconfont.jsp">阿里巴巴矢量图标库</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">拖动排序 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="draggable_panels.html">拖动面板</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/draggable_panels.jsp">拖动面板</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="agile_board.html">任务清单</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/agile_board.jsp">任务清单</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="buttons.html">按钮</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/buttons.jsp">按钮</a>
                             </li>
-                            <li><a class="J_menuItem" href="tabs_panels.html">选项卡 &amp; 面板</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/tabs_panels.jsp">选项卡 &amp; 面板</a>
                             </li>
-                            <li><a class="J_menuItem" href="notifications.html">通知 &amp; 提示</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/notifications.jsp">通知 &amp; 提示</a>
                             </li>
-                            <li><a class="J_menuItem" href="badges_labels.html">徽章，标签，进度条</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/badges_labels.jsp">徽章，标签，进度条</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="grid_options.html">栅格</a>
+                                <a class="J_menuItem" href="${ctx}/pages/ui/grid_options.jsp">栅格</a>
                             </li>
-                            <li><a class="J_menuItem" href="plyr.html">视频、音频</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/plyr.jsp">视频、音频</a>
                             </li>
                             <li>
                                 <a href="#">弹框插件 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="layer.html">Web弹层组件layer</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/layer.jsp">Web弹层组件layer</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="modal_window.html">模态窗口</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/modal_window.jsp">模态窗口</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="sweetalert.html">SweetAlert</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/sweetalert.jsp">SweetAlert</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">树形视图 <span class="fa arrow"></span></a>
                                 <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="jstree.html">jsTree</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/jstree.jsp">jsTree</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="tree_view.html">Bootstrap Tree View</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/tree_view.jsp">Bootstrap Tree View</a>
                                     </li>
-                                    <li><a class="J_menuItem" href="nestable_list.html">nestable</a>
+                                    <li><a class="J_menuItem" href="${ctx}/pages/ui/nestable_list.jsp">nestable</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="J_menuItem" href="toastr_notifications.html">Toastr通知</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/toastr_notifications.jsp">Toastr通知</a>
                             </li>
-                            <li><a class="J_menuItem" href="diff.html">文本对比</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/diff.jsp">文本对比</a>
                             </li>
-                            <li><a class="J_menuItem" href="spinners.html">加载动画</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/spinners.jsp">加载动画</a>
                             </li>
-                            <li><a class="J_menuItem" href="widgets.html">小部件</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/ui/widgets.jsp">小部件</a>
                             </li>
                         </ul>
                     </li>
