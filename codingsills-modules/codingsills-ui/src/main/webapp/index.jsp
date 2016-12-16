@@ -323,15 +323,15 @@
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">表格</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="table_basic.html">基本表格</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/table/table_basic.jsp">基本表格</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_data_tables.html">DataTables</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/table/table_data_tables.jsp">DataTables</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_jqgrid.html">jqGrid</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/table/table_jqgrid.jsp">jqGrid</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_foo_table.html">Foo Tables</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/table/table_foo_table.jsp">Foo Tables</a>
                             </li>
-                            <li><a class="J_menuItem" href="table_bootstrap.html">Bootstrap Table
+                            <li><a class="J_menuItem" href="${ctx}/pages/table/table_bootstrap.jsp">Bootstrap Table
                                 <span class="label label-danger pull-right">推荐</span></a>
                             </li>
                         </ul>
@@ -339,21 +339,21 @@
                     <li>
                         <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">相册</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="basic_gallery.html">基本图库</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/album/basic_gallery.jsp">基本图库</a>
                             </li>
-                            <li><a class="J_menuItem" href="carousel.html">图片切换</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/album/carousel.jsp">图片切换</a>
                             </li>
-                            <li><a class="J_menuItem" href="blueimp.html">Blueimp相册</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/album/blueimp.jsp">Blueimp相册</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="J_menuItem" href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                        <a class="J_menuItem" href="${ctx}/pages/other/css_animation.jsp"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+                            <li><a class="J_menuItem" href="${ctx}/pages/other/form_builder.jsp">表单构建器</a>
                             </li>
                         </ul>
                     </li>
