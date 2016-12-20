@@ -15,5 +15,6 @@
   	<module>codingsills-ssj</module>
   	<module>codingsills-shiro</module>
   	<module>codingsills-ui</module>
+	<module>codingsills-demo</module>
   </modules>
 </project>
