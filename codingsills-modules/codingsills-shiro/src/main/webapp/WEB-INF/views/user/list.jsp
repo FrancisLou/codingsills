@@ -59,8 +59,8 @@
 	         	{field:'opt',title:'操作',
 	         		formatter:function(value,row,index){
 	         			var str = '';
-	         			str += formatStr('<a href="${ctx}/user/toEditView.t?id={0}" title="修改"><i class="glyphicon glyphicon-edit"></i></a>',row.id);
-	         			str += '&emsp;'+formatStr('<a href="${ctx}/user/deleteUserById.t?id={0}" title="删除"><i class="glyphicon glyphicon-remove"></i></a>',row.id);
+	         			str += formatStr('<a href="${ctx}/user/editUser.t?id={0}" title="修改"><i class="glyphicon glyphicon-edit"></i></a>',row.id);
+	         			str += '&emsp;'+formatStr('<a href="${ctx}/user/deleteUser.t?id={0}" title="删除"><i class="glyphicon glyphicon-remove"></i></a>',row.id);
 						return str;		
 	         		}
 	         	}

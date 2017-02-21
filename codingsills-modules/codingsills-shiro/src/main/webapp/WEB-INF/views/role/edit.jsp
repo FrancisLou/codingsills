@@ -28,7 +28,11 @@
 				<div class="form-group">
 					<label class="col-lg-3 control-label">角色状态</label>
 					<div class="col-lg-5">
-						<input class="form-control" type="text" name="available" value="${role.available}"/>
+						<select class="form-control" name="available">
+							<option value="0" <c:if test="${role.available==false}">selected</c:if>>禁用</option>
+  							<option value="1" <c:if test="${role.available==true}">selected</c:if>>启用</option>
+						</select>
+						<%-- <input class="form-control" type="text" name="available" value="${role.available}"/> --%>
 					</div>
 				</div>
 				<div class="form-group">

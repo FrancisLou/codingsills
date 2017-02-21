@@ -90,4 +90,10 @@ public class ResourceController {
         return mav;
     }
     
+    public ModelAndView deleteMenu(@RequestParam(required=true,name="menuId")Long menuId){
+    	ModelAndView mav = new ModelAndView("resource/list");
+    	resourceService.delete(menuId);
+        
+        return mav;
+    }
 }

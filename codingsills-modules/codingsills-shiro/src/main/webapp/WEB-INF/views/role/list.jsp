@@ -25,7 +25,7 @@
 	var $table,selections;
 	function initBtn(){
 		$('#b_add').on('click',function(){
-			window.location.href='${ctx}/role/toAddView.t';
+			window.location.href='${ctx}/role/addRole.t';
 		});
 		$('#b_remove').on('click',function(){
 			//window.location.href='${ctx}/user/addView.action';
@@ -58,8 +58,8 @@
 	         	{field:'opt',title:'操作',
 	         		formatter:function(value,row,index){
 	         			var str = '';
-	         			str += formatStr('<a href="${ctx}/role/toEditView.t?id={0}" title="修改"><i class="glyphicon glyphicon-edit"></i></a>',row.id);
-	         			str += '&emsp;'+formatStr('<a href="${ctx}/role/delRole.t?id={0}" title="删除"><i class="glyphicon glyphicon-remove"></i></a>',row.id);
+	         			str += formatStr('<a href="${ctx}/role/editRole.t?id={0}" title="修改"><i class="glyphicon glyphicon-edit"></i></a>',row.id);
+	         			str += '&emsp;'+formatStr('<a href="${ctx}/role/deleteRole.t?id={0}" title="删除"><i class="glyphicon glyphicon-remove"></i></a>',row.id);
 						return str;		
 	         		}
 	         	}

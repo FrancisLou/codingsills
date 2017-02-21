@@ -53,9 +53,9 @@
 	<div id="tree"></div>
 	<div id="context-menu">
 	  <ul class="dropdown-menu" role="menu">
-	    <li id="add_li"><a tabindex="0" href="${ctx}/resource/toAddView.t?parentId="><i class="fa fa-plus fa-lg"></i>&nbsp;新增</a></li>
-	    <li><a tabindex="1" href="${ctx}/resource/toModifyView.t?menuId="><i class="fa fa-pencil fa-lg"></i>&nbsp;修改</a></li>
-	    <li><a tabindex="2" href="${ctx}/resource/toDelete.t?menuId="><i class="fa fa-remove fa-lg"></i>&nbsp;删除</a></li>
+	    <li id="add_li"><a tabindex="0" href="${ctx}/resource/addMenu.t?parentId="><i class="fa fa-plus fa-lg"></i>&nbsp;新增</a></li>
+	    <li><a tabindex="1" href="${ctx}/resource/editMenu.t?menuId="><i class="fa fa-pencil fa-lg"></i>&nbsp;修改</a></li>
+	    <li><a tabindex="2" href="${ctx}/resource/deleteMenu.t?menuId="><i class="fa fa-remove fa-lg"></i>&nbsp;删除</a></li>
 	  </ul>
 	</div>
 	<input id="p_id" type="text" hidden/>
