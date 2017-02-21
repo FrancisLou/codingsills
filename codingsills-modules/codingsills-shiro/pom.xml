@@ -32,6 +32,16 @@
   		<groupId>org.codingsills</groupId>
   		<artifactId>codingsills-utils</artifactId>
   	</dependency>
+  	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+		<optional>true</optional>
+	</dependency>
   	 <!-- spring -->
 	<dependency>
 		<groupId>org.springframework</groupId>
